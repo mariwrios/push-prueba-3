@@ -9,7 +9,7 @@ import { sendNotification } from './helper/sendNorification';
 function App() {
  const [message, setMessage] = useState('')
   const [formValues, handleInputChange, reset] = useForm({
-    msg:'Feliz dia'
+    msg:''
   })
   const { msg } = formValues;
 

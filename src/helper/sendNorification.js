@@ -5,7 +5,7 @@ export const sendNotification = (body) => {
   fetch('https://onesignal.com/api/v1/notifications', {
     'method': 'POST',
     'headers': {
-      'Authorization': 'Basic' + key,
+      'Authorization': 'Basic ' + key,
       'Content-Type': 'application/json'
     },
     'body': JSON.stringify({
