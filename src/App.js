@@ -13,10 +13,15 @@ function App() {
   })
   const { msg } = formValues;
 
+  const handleReset = () => {
+    reset()
+    setMessage(msg)
+  }
+
+
   useEffect(() => {
-  setMessage(msg) 
    sendNotification(message)
-  }, [message, msg])
+  }, [message])
 
   return (
     <div className="App">
@@ -24,7 +29,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Send a message! 💅</h1>
         <input type='text' onChange={handleInputChange} name='msg' value={msg}/>
-        <button onClick={reset}>
+        <button onClick={handleReset}>
         Click me!
       </button>
       </header>
