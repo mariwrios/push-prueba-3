@@ -7,16 +7,16 @@ import { sendNotification } from './helper/sendNorification';
 
 
 function App() {
- const [message, setMessage] = useState()
+ const [message, setMessage] = useState('')
   const [formValues, handleInputChange, reset] = useForm({
-    msg:''
+    msg:'Feliz dia'
   })
   const { msg } = formValues;
 
   useEffect(() => {
   setMessage(msg) 
    sendNotification(message)
-  }, [reset])
+  }, [message, msg])
 
   return (
     <div className="App">
